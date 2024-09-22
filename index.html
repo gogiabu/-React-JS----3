@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React JS-კომპონენტები-დავალება 3</title>
+    <link rel="icon" href="logo.png">
+    <style>
+        div{
+            padding: 20px;
+        }
+        h1{
+            text-align: center;
+        }
+      
+    </style>
+</head>
+<body>
+    <div>
+        <h1>React JS-კომპონენტები-დავალება 3</h1>
+        <h4>1. რა სახელი უნდა ერქვას მთავარ ჯავასკრიპტ ფაილს სადაც ყველაფრის თავმოყრა მოხდება და საბოლოო ჯამში 
+         რეაქტის აპლიკაცია რომელ ფაილში რენდერდება რათა საიტზე იყოს ნაჩვენები საბოლოო შედეგი?
+        </h4>
+        <p>    მთავარ ჯავასკრიპტ ფაილი არის src ფაილში არსებული index.js ფაილი, საბოლოო ჯამში რეაქტის აპლიკაცია საიტზე რომ გამოვიდეს ის უნდა ჩარენდერდეს  index.html ფაილში არსებულ მთავარ კომპონენტზე .
+        </p>
+        <h4>2. როგორი ტიპის კომპონენტების შექმნა შემიძლია რეაქტში?
+        </h4>
+        <p>  რეაქტში შეგვიძლია შევქმნათ ორი ტიპის კომპონენტი: ფუნქციური და კლასის ტიპისა. 
+        </p>
+        <h4>3. თუ მინდა კლასის ტიპის კომპონენტში ცვლადები გამოვიძახო, როგორ უნდა მოვიქცეტ ამისთვის?
+        </h4>
+        <p>
+            ამისთვის აუცილებელია გამოვიყენოთ შემდეგი ფორმულა, კლასის ტიპის კომპონენტი უნდა იყოს შვილობილი რეაქტის კომპონენტის ასევე გვჭირდება კლასის ტიპის კომპონენტთან მუშაობისას render ფუნქცია. <br>
+              <pre>
+                class App extends React.Component { 
+                    render() { 
+                      return ( 
+                        &lt;React.Fragment&gt;
+                        &lt;p&gt;text &lt;/p&gt;
+                        &lt;/React.Fragment&gt;
+                      ) 
+                    } 
+                  } 
+                </pre>
+        </p>
+        <h4> 4. რა შეცდომაა კოდში დაშვებული?<br>
+            class Car {<br>
+                        return &lt;h2&gt; Hi, I am a Car! &lt;/h2;&gt;
+                <br>
+              }
+
+        </h4> 
+        <p> აუცილებელია გამოვიყენოთ ფუნქცია  render. <br>
+            class Car {<br>
+                render() { <br>
+                return &lt;h2&gt; Hi, I am a Car! &lt;/h2&gt;
+        <br>
+                } <br>
+      }
+
+
+        </p>
+        <h4>5. რა შეცდომაა კოდში დაშვებული? <br>
+             class Car {<br>
+                render() { <br>
+                return ( <br>
+                &lt;h2&gt; Hi, I am a Car! &lt;/h2&gt; <br>
+                &lt;h2&gt; Hi, I am a Car! &lt;/h2&gt; <BR>
+                )
+        <br>
+                } <br>
+      }
+
+
+
+        </h4>
+        <p>თუ რამოდენიმე ელემენტი გვინდა გავუშვათ საიტზე ის უნდა მოვათავსოთ რაიმე მშობელ ელემენტში მაგალითად აქ გამოვიყენოთ  React.Fragment <br>
+            <pre>
+            class Car {
+                render() { 
+                return ( 
+                    &lt;React.Fragment&gt;
+                       &lt;h2&gt; Hi, I am a Car! &lt;/h2&gt; 
+                       &lt;h2&gt; Hi, I am a Car! &lt;/h2&gt;
+                    &lt;/React.Fragment&gt;
+                )
+        
+            } 
+      }
+            </pre>
+       </div>
+    
+</body>
+</html>
